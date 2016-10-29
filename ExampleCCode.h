@@ -1,13 +1,24 @@
 
-//Insert Doxygen Here
-typedef enum {
+//insert Doxygen here
+typedef enum{
+	NORESPONSE,
+	MELTDOWN,
+	SUCCESS
+}RESPONSE;
+
+
+typedef enum{
+	LOLLIPOP,
 	BED,
 	BATH,
 	BRUSHTEETH,
-	EATDINNER
-}List_Of_Questions;
+	EATDINNER,
+	REQUEST_SIZE
+}REQUESTS;
 
-//Insert Doxygen here
-List_Of_Questions PromptForQuestion(int *ipAge);
 //insert Doxygen here
-bool ProvideResponse(List_Of_Questions *enParentQuestion);
+
+//insert Doxygen here
+bool PromptForRequest(int *ipAge, int *iaCount);
+//insert Doxygen here
+bool ProvideResponse(int *ipAge, int *iaCount);
