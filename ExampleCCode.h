@@ -19,6 +19,6 @@ typedef enum{
 //insert Doxygen here
 
 //insert Doxygen here
-bool PromptForRequest(int *ipAge, int *iaCount);
+int PromptForRequest(int *iAge, int *iaQuestionCountList);
 //insert Doxygen here
-bool ProvideResponse(int *ipAge, int *iaCount);
+int ProvideResponse(int *ipAge, int *iaCount);
