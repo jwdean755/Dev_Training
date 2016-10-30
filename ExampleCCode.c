@@ -14,7 +14,7 @@ int main(){
 	int iReturn = 1;
 	RESPONSE enChildResponse = NORESPONSE;
 	while(NORESPONSE == enChildResponse){
-	       	iReturn = PromptForAgeAndRequest(&iAge, iaQuestionCountList);
+	       	PromptForAgeAndRequest(&iAge, iaQuestionCountList);
 		enChildResponse = ProvideResponse(&iAge, iaQuestionCountList);
 	}
 	if(SUCCESS == enChildResponse){
