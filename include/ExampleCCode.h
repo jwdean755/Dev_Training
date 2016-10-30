@@ -30,7 +30,7 @@ typedef enum{
 /**
  * @brief This function prompts user for age and for their request to the child
  *
- * @param[out]	ipAge	Contains the age of the child
+ * @param[in,out]	ipAge	Contains the age of the child
  * @param[out]	iaQuestionCountList	Contains a count of all the Requests
  */
 void PromptForAgeAndRequest(int *ipAge, int *iaQuestionCountList);

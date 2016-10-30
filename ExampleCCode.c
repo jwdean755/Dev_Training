@@ -72,7 +72,7 @@ RESPONSE ProvideResponse(int *ipAge, int *iaQuestionCountList){
 		enChildResponse = SUCCESS;
 	}
 
-	//else if iaQuestionCountList[LOLLIPOP]*3 >= *ipAge, set response to SUCCESS
+	//else if iaQuestionCountList[LOLLIPOP] >= *ipAge, set response to SUCCESS
 	else if(iaQuestionCountList[LOLLIPOP] >= *ipAge){
 		enChildResponse = SUCCESS;
 	}
