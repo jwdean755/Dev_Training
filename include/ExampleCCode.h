@@ -8,12 +8,12 @@ typedef enum{
 
 
 typedef enum{
-	LOLLIPOP,
-	BED,
-	BATH,
-	BRUSHTEETH,
-	EATDINNER,
-	REQUEST_SIZE
+	LOLLIPOP = 1,
+	BED = 2,
+	BATH = 3,
+	BRUSHTEETH = 4,
+	EATDINNER = 5,
+	REQUEST_SIZE = 5
 }REQUESTS;
 
 //insert Doxygen here
@@ -21,4 +21,6 @@ typedef enum{
 //insert Doxygen here
 int PromptForRequest(int *iAge, int *iaQuestionCountList);
 //insert Doxygen here
-int ProvideResponse(int *ipAge, int *iaCount);
+RESPONSE ProvideResponse(int *ipAge, int *iaQuestionCountList);
+
+void ClearInput(int iResult);
