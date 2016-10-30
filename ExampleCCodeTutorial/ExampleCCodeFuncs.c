@@ -1,29 +1,12 @@
 /**
- * @file ExampleCCode.c
+ * @file ExampleCCodeFuncs.c
  * @author Dean
  * @date 29 Oct 2016
- * @brief File containing ExampleCCode
+ * @brief File containing functions for ExampleCCode
  *
  */
 #include <stdio.h>
 #include "ExampleCCode.h"
-int main(){
-	//Initialize the question count to the size of the REQUESTS enum
-	int iaQuestionCountList[REQUEST_SIZE];
-	int iAge = 0;
-	int iReturn = 1;
-	RESPONSE enChildResponse = NORESPONSE;
-	while(NORESPONSE == enChildResponse){
-	       	PromptForAgeAndRequest(&iAge, iaQuestionCountList);
-		enChildResponse = ProvideResponse(&iAge, iaQuestionCountList);
-	}
-	if(SUCCESS == enChildResponse){
-		printf("Parenting Success\n");
-	}else{
-		printf("WAAAAAAAAAAAAAAAAAAAAAAA!!!!\n");
-	}
-	return 0;
-}
 
 
 void PromptForAgeAndRequest(int *ipAge, int *iaQuestionCountList){
@@ -34,6 +17,7 @@ void PromptForAgeAndRequest(int *ipAge, int *iaQuestionCountList){
 		while(EOF == iResult){
 			printf("What age is your child?:\n");
 			iResult = scanf("%d", ipAge);
+			ClearInput(iResult);
 			//Absorb number input for age
 			if (iResult == EOF || 1 > *ipAge) {
 	    			printf("There was an error, \nPlease try your input again\n");
@@ -62,19 +46,19 @@ void PromptForAgeAndRequest(int *ipAge, int *iaQuestionCountList){
 RESPONSE ProvideResponse(int *ipAge, int *iaQuestionCountList){
 	RESPONSE enChildResponse = NORESPONSE;
 
-	//if age is above 13 set child response to MELTDOWN
-	if(14 < *ipAge && 23 > *ipAge){
+	//if age is between 13 and 22 set child response to MELTDOWN
+	if(12 < *ipAge && 23 > *ipAge){
 		enChildResponse = MELTDOWN;
 	}
 
 	//else if age is above 22, success
 	else if(22 < *ipAge){
-		enChildResponse = SUCCESS;
+		enChildResponse = CHILDSUCCESS;
 	}
 
-	//else if iaQuestionCountList[LOLLIPOP] >= *ipAge, set response to SUCCESS
-	else if(iaQuestionCountList[LOLLIPOP] >= *ipAge){
-		enChildResponse = SUCCESS;
+	//else if iaQuestionCountList[CANDY] >= *ipAge, set response to CHILDSUCCESS
+	else if(iaQuestionCountList[CANDY] >= *ipAge){
+		enChildResponse = CHILDSUCCESS;
 	}
 
 	//else if age below 3 set enChildResponse to MELTDOWN

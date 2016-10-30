@@ -10,15 +10,15 @@
  */
 typedef enum{
 	NORESPONSE,
-	MELTDOWN,
-	SUCCESS
+	CHILDSUCCESS,
+	MELTDOWN
 }RESPONSE;
 
 /**
  * @brief Contains and Documents Parents's Response.
  */
 typedef enum{
-	LOLLIPOP = 1,
+	CANDY = 1,
 	BED = 2,
 	BATH = 3,
 	BRUSHTEETH = 4,
