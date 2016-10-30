@@ -1,0 +1,27 @@
+/**
+ * This project is an example of a tested and mostly documented
+ * program.  There are areas of improvement (I wrote over the weekend
+ * and not all of it is sober code) but the basic programming guidelines
+ * are there.
+*/
+
+Requirements:
+	Create a program that allows the user to test their parenting skills.The user should be able to specify the simulated child's age.  Proper research should be done to determine the proper reaction of children to the user's (parent's) demands based on age.
+
+Structure of Tutorial
+1.  Come up with Stories for the Project (Backlog)
+	a.  "As a user I want to _____"
+	b.  INVEST
+		Independent
+		Negotiable
+		Valuable
+		Estimable
+		Small
+		Testable
+	b.  Acceptance Criteria: 
+		Conditions that must be met for story to be accepted by customer
+		Clear Pass or Fail
+2.  Inception Planning / Sprint 0
+	a.  Work with Steakholders to refine Backlog
+2.  Break Stories into tasks that correspond to the Project
+3.  
