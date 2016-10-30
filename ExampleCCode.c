@@ -1,16 +1,20 @@
+/**
+ * @file ExampleCCode.c
+ * @author Dean
+ * @date 29 Oct 2016
+ * @brief File containing ExampleCCode
+ *
+ */
 #include <stdio.h>
 #include "ExampleCCode.h"
-int main()
-{
-	//TODO Insert Comments -- Create Functions
-	//TODO Set up Cmake and folder structure
+int main(){
 	//Initialize the question count to the size of the REQUESTS enum
 	int iaQuestionCountList[REQUEST_SIZE];
 	int iAge = 0;
 	int iReturn = 1;
 	RESPONSE enChildResponse = NORESPONSE;
 	while(NORESPONSE == enChildResponse){
-	       	iReturn = PromptForRequest(&iAge, iaQuestionCountList);
+	       	iReturn = PromptForAgeAndRequest(&iAge, iaQuestionCountList);
 		enChildResponse = ProvideResponse(&iAge, iaQuestionCountList);
 	}
 	if(SUCCESS == enChildResponse){
@@ -22,7 +26,7 @@ int main()
 }
 
 
-int PromptForRequest(int *ipAge, int *iaQuestionCountList){
+void PromptForAgeAndRequest(int *ipAge, int *iaQuestionCountList){
 	//If Age is 0 Ask for age of child
 	int iResult = EOF;
 	int iTempResult = 0;
@@ -31,7 +35,7 @@ int PromptForRequest(int *ipAge, int *iaQuestionCountList){
 			printf("What age is your child?:\n");
 			iResult = scanf("%d", ipAge);
 			//Absorb number input for age
-			if (iResult == EOF) {
+			if (iResult == EOF || 1 > *ipAge) {
 	    			printf("There was an error, \nPlease try your input again\n");
 			}
 		}
@@ -54,7 +58,6 @@ int PromptForRequest(int *ipAge, int *iaQuestionCountList){
 		}
 	}
 	iaQuestionCountList[iTempResult]++;
-	return 0;
 }
 RESPONSE ProvideResponse(int *ipAge, int *iaQuestionCountList){
 	RESPONSE enChildResponse = NORESPONSE;
