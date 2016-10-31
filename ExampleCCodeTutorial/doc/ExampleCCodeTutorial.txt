@@ -6,11 +6,11 @@
 */
 
 Requirements:
-	Create a program that allows the user to test their parenting skills.The user should be able to specify the simulated child's age.  Proper research should be done to determine the proper reaction of children to the user's (parent's) demands based on age.
+	Create a program that allows the user to test their parenting skills.  The user should be able to specify the simulated child's age.  Proper research should be done to determine the proper reaction of children to the user's (parent's) demands based on age.  This reaction should then be programmed into the simulated child.
 
 Structure of Tutorial
 1.  Come up with Stories for the Project (Backlog)
-	a.  "As a user I want to _____"
+	a.  "As a user I want to ________"
 	b.  INVEST
 		Independent
 		Negotiable
@@ -22,6 +22,9 @@ Structure of Tutorial
 		Conditions that must be met for story to be accepted by customer
 		Clear Pass or Fail
 2.  Inception Planning / Sprint 0
-	a.  Work with Steakholders to refine Backlog
-2.  Break Stories into tasks that correspond to the Project
-3.  
+	a.  Work with Steakholders to refine Backlog.
+2.  Break Stories into tasks that correspond to the Project. (Each task should take two to four hours)
+3.  Estimate the effort needed to complete the first three to four stories.
+4.  Repeatedly take tasks from the highest priority Story and begin to code using TDD (Test Driven Development).
+	a.  Ensure full Unit, Modular, and System tests are completed. 
+5.  Complete a Sprint Review and Retrospective every 1-3 weeks.
